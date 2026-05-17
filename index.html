@@ -3,29 +3,237 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mcps.mote.com</title>
+  <title>MCPS RFP No. 7232.2 — Companion Video | Mote</title>
+  <meta name="description" content="Companion video demonstration for Mote Technologies' response to Montgomery County Public Schools RFP No. 7232.2 — Assistive Technology Reading & Writing Tool." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" />
   <style>
+    :root {
+      --ink: #111827;
+      --ink-soft: #374151;
+      --muted: #6b7280;
+      --rule: #e5e7eb;
+      --bg: #faf9fc;
+      --card: #ffffff;
+      --accent: #ac0ae8;
+      --accent-soft: #f5e6fb;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      display: grid;
-      place-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #f6f5fb;
-      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
     }
-    main {
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 28px 80px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 40px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      line-height: 1.2;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    .lede {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      margin: 0 0 36px;
+      max-width: 56ch;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px -12px rgba(17, 24, 39, 0.25);
+    }
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-caption {
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: var(--muted);
       text-align: center;
-      padding: 2rem;
     }
-    h1 { font-size: 2.5rem; margin: 0 0 0.5rem; }
-    p  { color: #555; margin: 0; }
+    .video-caption a { color: var(--muted); text-decoration: underline; }
+
+    section.what {
+      margin-top: 56px;
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+    }
+    section.what h2 {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+    .perspectives {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+    @media (min-width: 640px) {
+      .perspectives { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    }
+    .perspective h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .perspective p {
+      margin: 0;
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+    }
+    .perspective .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      justify-content: space-between;
+      align-items: baseline;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer .left strong { color: var(--ink); font-weight: 600; }
+    footer .right { text-align: right; }
+    @media (max-width: 540px) {
+      footer .right { text-align: left; }
+      h1 { font-size: 1.7rem; }
+      .wrap { padding: 40px 20px 60px; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Hello, world.</h1>
-    <p>mcps.mote.com</p>
-  </main>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Mote</span>
+      </div>
+      <div class="eyebrow">Companion video</div>
+    </header>
+
+    <p class="eyebrow" style="margin: 0 0 14px;">Montgomery County Public Schools · RFP No. 7232.2</p>
+    <h1>Assistive Technology Reading &amp; Writing Tool — Demonstration</h1>
+    <p class="lede">
+      A 20-minute recorded demonstration prepared for MCPS reviewers, accompanying Mote's written response per §9.0-2.
+    </p>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/pFrdYv8SC60?rel=0&modestbranding=1"
+        title="Mote — MCPS RFP No. 7232.2 companion video"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+    <p class="video-caption">
+      Trouble with the embed? <a href="https://www.youtube.com/watch?v=pFrdYv8SC60" rel="noopener">Open on YouTube</a>.
+    </p>
+
+    <section class="what" aria-label="What's in the video">
+      <h2>What's in the video</h2>
+      <div class="perspectives">
+        <div class="perspective">
+          <span class="tag">Student</span>
+          <h3>A day in the life</h3>
+          <p>Reading, writing, and accessibility tools in Google Slides, Docs, the open web, and motePDF.</p>
+        </div>
+        <div class="perspective">
+          <span class="tag">Teacher</span>
+          <h3>Classroom controls</h3>
+          <p>Assessment Mode, vocabulary lists, and integrations with Google Forms and Google Slides.</p>
+        </div>
+        <div class="perspective">
+          <span class="tag">Administrator</span>
+          <h3>motePlatform</h3>
+          <p>Rostering, role-based controls, and the usage analytics referenced in §3.1-DATA and §3.3-a.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="left">
+        Submitted by <strong>Mote Technologies, Inc.</strong><br />
+        Will Jackson, CEO · <a href="mailto:will@mote.com">will@mote.com</a>
+      </div>
+      <div class="right">
+        <a href="https://www.mote.com" rel="noopener">mote.com →</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
