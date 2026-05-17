@@ -45,20 +45,14 @@
       margin-bottom: 40px;
     }
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
-      color: var(--ink);
+      text-decoration: none;
     }
-    .brand-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: inline-block;
+    .brand img {
+      height: 32px;
+      width: auto;
+      display: block;
     }
     .eyebrow {
       font-size: 0.78rem;
@@ -106,51 +100,19 @@
     }
     .video-caption a { color: var(--muted); text-decoration: underline; }
 
-    section.what {
-      margin-top: 56px;
-      padding: 32px;
-      background: var(--card);
-      border: 1px solid var(--rule);
+    figure.contents {
+      margin: 56px 0 0;
+      padding: 0;
       border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px -12px rgba(17, 24, 39, 0.18);
+      border: 1px solid var(--rule);
+      background: #fff;
     }
-    section.what h2 {
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 600;
-      margin: 0 0 20px;
-    }
-    .perspectives {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
-    }
-    @media (min-width: 640px) {
-      .perspectives { grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    }
-    .perspective h3 {
-      margin: 0 0 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .perspective p {
-      margin: 0;
-      font-size: 0.93rem;
-      color: var(--ink-soft);
-    }
-    .perspective .tag {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 999px;
-      margin-bottom: 10px;
+    figure.contents img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     footer {
@@ -177,22 +139,21 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span>Mote</span>
-      </div>
+      <a href="https://www.mote.com" class="brand" rel="noopener" aria-label="Mote">
+        <img src="assets/mote-lockup.png" alt="Mote" />
+      </a>
       <div class="eyebrow">Companion video</div>
     </header>
 
     <p class="eyebrow" style="margin: 0 0 14px;">Montgomery County Public Schools · RFP No. 7232.2</p>
     <h1>Assistive Technology Reading &amp; Writing Tool — Demonstration</h1>
     <p class="lede">
-      A 20-minute recorded demonstration prepared for MCPS reviewers, accompanying Mote's written response per §9.0-2.
+      An 11-minute recorded demonstration prepared for MCPS reviewers, accompanying Mote's written response per §9.0-2.
     </p>
 
     <div class="video">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/pFrdYv8SC60?rel=0&modestbranding=1"
+        src="https://www.youtube-nocookie.com/embed/O19r4U_hBTI?rel=0&modestbranding=1"
         title="Mote — MCPS RFP No. 7232.2 companion video"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -201,29 +162,12 @@
       ></iframe>
     </div>
     <p class="video-caption">
-      Trouble with the embed? <a href="https://www.youtube.com/watch?v=pFrdYv8SC60" rel="noopener">Open on YouTube</a>.
+      Trouble with the embed? <a href="https://www.youtube.com/watch?v=O19r4U_hBTI" rel="noopener">Open on YouTube</a>.
     </p>
 
-    <section class="what" aria-label="What's in the video">
-      <h2>What's in the video</h2>
-      <div class="perspectives">
-        <div class="perspective">
-          <span class="tag">Student</span>
-          <h3>A day in the life</h3>
-          <p>Reading, writing, and accessibility tools in Google Slides, Docs, the open web, and motePDF.</p>
-        </div>
-        <div class="perspective">
-          <span class="tag">Teacher</span>
-          <h3>Classroom controls</h3>
-          <p>Assessment Mode, vocabulary lists, and integrations with Google Forms and Google Slides.</p>
-        </div>
-        <div class="perspective">
-          <span class="tag">Administrator</span>
-          <h3>motePlatform</h3>
-          <p>Rostering, role-based controls, and the usage analytics referenced in §3.1-DATA and §3.3-a.</p>
-        </div>
-      </div>
-    </section>
+    <figure class="contents">
+      <img src="assets/video-contents.jpg" alt="Video contents — Explore Mote by role. Students: listening to text, images and equations read aloud; write with voice; type using text prediction; review writing grammar independently; translate content into native languages; look up and save new vocabulary with picture dictionary; highlight and export important information; reduce distractions with focus mode and screen mask; use Mote on PDFs. Teachers: limiting or control student feature access; add read aloud and translation to Google Forms; add voice instruction to Google Slides; create and share vocabulary lists; explore Mote's learning materials. Admin: SSO options including Google; manage users, licenses and permissions; monitor usage analytics and generate impact reports." />
+    </figure>
 
     <footer>
       <div class="left">
